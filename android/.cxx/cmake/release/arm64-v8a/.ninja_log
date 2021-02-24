@@ -1,0 +1,19 @@
+# ninja log v5
+36	6972	635881433	CMakeFiles/yolov5.dir/MbnFCN.cpp.o	841f294e7451846b
+21	7106	635881433	CMakeFiles/yolov5.dir/ENet.cpp.o	d980552c065a72d3
+44	7124	635881433	CMakeFiles/yolov5.dir/MobileNetV3Seg.cpp.o	51636d09619e6f75
+29	7634	635881433	CMakeFiles/yolov5.dir/NanoDet.cpp.o	d1dbc1367ea34125
+14	7682	635881433	CMakeFiles/yolov5.dir/FaceLandmark.cpp.o	3512f90a9630bd79
+6977	11365	635881437	CMakeFiles/yolov5.dir/YoloV4.cpp.o	98c67e3b573f7b02
+7125	12948	635881439	CMakeFiles/yolov5.dir/YoloV5.cpp.o	3215aaea657523a0
+7682	13879	635881440	CMakeFiles/yolov5.dir/SimplePose.cpp.o	c2336fb91c359ec
+7107	14370	635881440	CMakeFiles/yolov5.dir/Yolact.cpp.o	37566a7303417078
+4	14803	635881441	CMakeFiles/yolov5.dir/DBFace.cpp.o	27b46fad36ad18cf
+7635	14957	635881441	CMakeFiles/yolov5.dir/ocr/ZUtil.cpp.o	4da2ed996788b7dd
+14370	20839	635881447	CMakeFiles/yolov5.dir/YoloV5CustomLayer.cpp.o	16022411e58ccb18
+13879	21112	635881447	CMakeFiles/yolov5.dir/ocr/NCNNDBNet.cpp.o	9f421567973eab8e
+12948	22994	635881449	CMakeFiles/yolov5.dir/ocr/RRLib.cpp.o	364c8d0a44c52db0
+11366	23664	635881450	CMakeFiles/yolov5.dir/jni_interface.cpp.o	1943f56165bab14b
+14957	27565	635881453	CMakeFiles/yolov5.dir/ocr/clipper.cpp.o	419ee99c573894d0
+14805	27915	635881454	CMakeFiles/yolov5.dir/ocr/ocr.cpp.o	e29b74014422785f
+27916	29149	635881455	C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/example/build/flutter_yolo_hyperlpr_plugin/intermediates/cmake/release/obj/arm64-v8a/libyolov5.so	74f6405468bcb0fc

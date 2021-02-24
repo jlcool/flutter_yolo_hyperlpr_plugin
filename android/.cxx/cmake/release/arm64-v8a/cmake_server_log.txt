@@ -1,0 +1,146 @@
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"supportedProtocolVersions":[{"isExperimental":true,"major":1,"minor":1}],"type":"hello"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {
+  "type": "handshake",
+  "cookie": "gradle-cmake-cookie",
+  "protocolVersion": {
+    "isExperimental": true,
+    "major": 1,
+    "minor": 1
+  },
+  "sourceDirectory": "C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/android/src/main/cpp",
+  "buildDirectory": "C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/android/.cxx/cmake/release/arm64-v8a",
+  "generator": "Ninja"
+}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"gradle-cmake-cookie","inReplyTo":"handshake","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {
+  "type": "configure",
+  "cacheArguments": [
+    "",
+    "-DANDROID_ABI\u003darm64-v8a",
+    "-DANDROID_PLATFORM\u003dandroid-26",
+    "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dC:\\Users\\Administrator\\Documents\\Projects\\Flutter\\flutter_yolo_hyperlpr_plugin\\example\\build\\flutter_yolo_hyperlpr_plugin\\intermediates\\cmake\\release\\obj\\arm64-v8a",
+    "-DCMAKE_BUILD_TYPE\u003dRelease",
+    "-DANDROID_NDK\u003dC:\\Users\\Administrator\\AppData\\Local\\Android\\sdk\\ndk\\21.0.6113669",
+    "-DCMAKE_CXX_FLAGS\u003d",
+    "-DCMAKE_SYSTEM_NAME\u003dAndroid",
+    "-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a",
+    "-DCMAKE_SYSTEM_VERSION\u003d26",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON",
+    "-DCMAKE_ANDROID_NDK\u003dC:\\Users\\Administrator\\AppData\\Local\\Android\\sdk\\ndk\\21.0.6113669",
+    "-DCMAKE_TOOLCHAIN_FILE\u003dC:\\Users\\Administrator\\AppData\\Local\\Android\\sdk\\ndk\\21.0.6113669\\build\\cmake\\android.toolchain.cmake",
+    "-G Ninja",
+    "-DCMAKE_MAKE_PROGRAM\u003dC:\\Users\\Administrator\\AppData\\Local\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "-DANDROID_PLATFORM\u003dandroid-24",
+    "-DANDROID_STL\u003dc++_static",
+    "-DANDROID_STL\u003dc++_shared"
+  ]
+}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":1000,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Configuring done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Configuring done
+CMAKE SERVER: Configuring done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"compute"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","progressCurrent":1000,"progressMaximum":1000,"progressMessage":"Generating","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","message":"Generating done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Generating done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"cmakeInputs"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"buildFiles":[{"isCMake":true,"isTemporary":false,"sources":["C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"]},{"isCMake":false,"isTemporary":false,"sources":["CMakeLists.txt","C:/Users/Administrator/AppData/Local/Android/Sdk/ndk/21.0.6113669/build/cmake/android.toolchain.cmake","C:/Users/Administrator/AppData/Local/Android/Sdk/ndk/21.0.6113669/build/cmake/platforms.cmake"]},{"isCMake":false,"isTemporary":true,"sources":["../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeSystem.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCCompiler.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"]}],"cmakeRootDirectory":"C:/Users/Administrator/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10","cookie":"","inReplyTo":"cmakeInputs","sourceDirectory":"C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/android/src/main/cpp","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"codemodel"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"configurations":[{"name":"Release","projects":[{"buildDirectory":"C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/android/.cxx/cmake/release/arm64-v8a","name":"Project","sourceDirectory":"C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/android/src/main/cpp","targets":[{"artifacts":["C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/example/build/flutter_yolo_hyperlpr_plugin/intermediates/cmake/release/obj/arm64-v8a/libyolov5.so"],"buildDirectory":"C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/android/.cxx/cmake/release/arm64-v8a","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fopenmp -O2 -DNDEBUG  -fPIC  ","defines":["yolov5_EXPORTS"],"includePath":[{"path":"C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/android/src/main/cpp/ncnnvulkan/include"},{"path":"C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/android/src/main/cpp/ocr"},{"path":"C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/android/src/main/cpp/opencv/include"}],"isGenerated":false,"language":"CXX","sources":["DBFace.cpp","ENet.cpp","FaceLandmark.cpp","MbnFCN.cpp","MobileNetV3Seg.cpp","NanoDet.cpp","SimplePose.cpp","Yolact.cpp","YoloV4.cpp","YoloV5.cpp","YoloV5CustomLayer.cpp","jni_interface.cpp","ocr/NCNNDBNet.cpp","ocr/RRLib.cpp","ocr/ZUtil.cpp","ocr/clipper.cpp","ocr/ocr.cpp"]}],"fullName":"libyolov5.so","linkFlags":"-Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -static-openmp","linkLibraries":"-llog -lvulkan -landroid -ljnigraphics C:\\Users\\Administrator\\Documents\\Projects\\Flutter\\flutter_yolo_hyperlpr_plugin\\android\\src\\main\\cpp\\opencv\\arm64-v8a\\libopencv_java4.so -llog -lvulkan -landroid -ljnigraphics C:\\Users\\Administrator\\Documents\\Projects\\Flutter\\flutter_yolo_hyperlpr_plugin\\android\\src\\main\\cpp\\ncnnvulkan\\arm64-v8a\\libncnn.a C:\\Users\\Administrator\\Documents\\Projects\\Flutter\\flutter_yolo_hyperlpr_plugin\\android\\src\\main\\cpp\\ncnnvulkan\\arm64-v8a\\libglslang.a C:\\Users\\Administrator\\Documents\\Projects\\Flutter\\flutter_yolo_hyperlpr_plugin\\android\\src\\main\\cpp\\ncnnvulkan\\arm64-v8a\\libSPIRV.a C:\\Users\\Administrator\\Documents\\Projects\\Flutter\\flutter_yolo_hyperlpr_plugin\\android\\src\\main\\cpp\\ncnnvulkan\\arm64-v8a\\libOGLCompiler.a C:\\Users\\Administrator\\Documents\\Projects\\Flutter\\flutter_yolo_hyperlpr_plugin\\android\\src\\main\\cpp\\ncnnvulkan\\arm64-v8a\\libOSDependent.a -latomic -lm","linkerLanguage":"CXX","name":"yolov5","sourceDirectory":"C:/Users/Administrator/Documents/Projects/Flutter/flutter_yolo_hyperlpr_plugin/android/src/main/cpp","sysroot":"C:/Users/Administrator/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot","type":"SHARED_LIBRARY"}]}]}],"cookie":"","inReplyTo":"codemodel","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
