@@ -31,16 +31,16 @@ list (APPEND SOURCES
      ${SOURCES1}
      ${SOURCES2}
 )
-message(STATUS "My sources: ${SOURCES}")
-add_library( # Sets the name of the library.
-             hyperlpr
+# message(STATUS "My sources: ${SOURCES}")
+# add_library( # Sets the name of the library.
+#              hyperlpr
 
-             # Sets the library as a shared library.
-             SHARED
-#        STATIC
+#              # Sets the library as a shared library.
+#              SHARED
+# #        STATIC
 
-             # Provides a relative path to your source file(s).
-            ${SOURCES})
+#              # Provides a relative path to your source file(s).
+#             ${SOURCES})
 #add_library( # Sets the name of the library.
 #        yolov5
 #

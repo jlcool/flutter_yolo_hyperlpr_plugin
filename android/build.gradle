@@ -61,7 +61,7 @@ android {
     }
     sourceSets {
         main {
-            jniLibs.srcDirs = ['src/main/jniLibs', 'libs','src/main/cpp/opencv']  // libs
+            jniLibs.srcDirs = ['src/main/jniLibs', 'libs','src/main/cpp/opencv420/sdk/native/libs']  // libs
         }
     }
     compileOptions {
