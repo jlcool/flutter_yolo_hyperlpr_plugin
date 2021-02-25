@@ -1,21 +1,31 @@
-# For more information about using CMake with Android Studio, read the
-# documentation: https://d.android.com/studio/projects/add-native-code.html
-
-# Sets the minimum version of CMake required to build the native library.
 
 cmake_minimum_required(VERSION 3.6)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fopenmp")
-set(OpenCV_DIR ${CMAKE_CURRENT_SOURCE_DIR}/opencv420/sdk/native/jni)
+set(OpenCV_DIR C:\\Users\\Administrator\\Documents\\Projects\\Flutter\\flutter_yolo_hyperlpr_plugin\\android\\src\\main\\cpp\\opencv420\\sdk\\native\\jni)
 if(DEFINED ANDROID_NDK_MAJOR AND ${ANDROID_NDK_MAJOR} GREATER 20)
     set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static-openmp")
 endif()
-# Creates and names a library, sets it as either STATIC
-# or SHARED, and provides the relative paths to its source code.
-# You can define multiple libraries, and CMake builds them for you.
-# Gradle automatically packages shared libraries with your APK.
 
-# 搜索当前目录下的所有.cpp文件
+find_package(OpenCV REQUIRED)
+message(STATUS "OpenCV libraries: ${OpenCV_LIBS}")
+aux_source_directory(./lpr SOURCES1)
+aux_source_directory(./src SOURCES2)
+list (APPEND SOURCES
+     ${SOURCES1}
+     ${SOURCES2}
+)
+message(STATUS "My sources: ${SOURCES}")
+add_library(
+             hyperlpr
+             SHARED
+            ${SOURCES})
+target_link_libraries(hyperlpr jnigraphics ${OpenCV_LIBS})
+
+
+
+
+
 aux_source_directory(. SRC_LIST)
 aux_source_directory(./ocr OCR_SRC_LIST)
 add_library(
@@ -25,57 +35,10 @@ add_library(
         ${OCR_SRC_LIST}
         )
 
-aux_source_directory(./lpr SOURCES1)
-aux_source_directory(./src SOURCES2)
-list (APPEND SOURCES
-     ${SOURCES1}
-     ${SOURCES2}
-)
-# message(STATUS "My sources: ${SOURCES}")
-# add_library( # Sets the name of the library.
-#              hyperlpr
-
-#              # Sets the library as a shared library.
-#              SHARED
-# #        STATIC
-
-#              # Provides a relative path to your source file(s).
-#             ${SOURCES})
-#add_library( # Sets the name of the library.
-#        yolov5
-#
-#        # Sets the library as a shared library.
-#        SHARED
-#
-#        # Provides a relative path to your source file(s).
-#        jni_interface.cpp
-#        YoloV5.cpp
-#        YoloV4.cpp
-#        SimplePose.cpp
-#        Yolact.cpp
-#        ocr/clipper.cpp
-#        ocr/NCNNDBNet.cpp
-#        ocr/ocr.cpp
-#        ocr/RRLib.cpp
-#        ocr/ZUtil.cpp
-#        ENet.cpp
-#        FaceLandmark.cpp
-#        DBFace.cpp
-#        MbnFCN.cpp
-#        MobileNetV3Seg.cpp
-#        YoloV5CustomLayer.cpp
-#        NanoDet.cpp
-#        )
-
 include_directories(
         ncnnvulkan/include
         ocr
 )
-# Searches for a specified prebuilt library and stores the path as a
-# variable. Because CMake includes system libraries in the search path by
-# default, you only need to specify the name of the public NDK library
-# you want to add. CMake verifies that the library exists before
-# completing its build.
 
 find_library(log-lib log)
 find_library(android-lib android)
@@ -84,11 +47,7 @@ find_library(jnigraphics-lib jnigraphics)
 add_library( ncnn STATIC IMPORTED )
 set_target_properties( # Specifies the target library.
         ncnn
-
-        # Specifies the parameter you want to define.
         PROPERTIES IMPORTED_LOCATION
-
-        # Provides the path to the library you want to import.
         ${CMAKE_SOURCE_DIR}/ncnnvulkan/${ANDROID_ABI}/libncnn.a )
 
 
@@ -102,26 +61,18 @@ set_target_properties(OGLCompiler PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DI
 set_target_properties(OSDependent PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/ncnnvulkan/${ANDROID_ABI}/libOSDependent.a)
 set_target_properties(SPIRV PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/ncnnvulkan/${ANDROID_ABI}/libSPIRV.a)
 
-# disable rtti and exceptions
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-rtti -fno-exceptions")
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-rtti")
-# enable rtti and exceptions
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -frtti")
 
 include_directories(
-        ${CMAKE_SOURCE_DIR}/opencv/include/
+        ${CMAKE_SOURCE_DIR}/opencv420/sdk/native/jni/include/
 )
 add_library(libopencv_java4 STATIC IMPORTED)
 set_target_properties(
         libopencv_java4
         PROPERTIES IMPORTED_LOCATION
-        ${CMAKE_SOURCE_DIR}/opencv/${ANDROID_ABI}/libopencv_java4.so
+        ${CMAKE_SOURCE_DIR}/opencv420/sdk/native/libs/${ANDROID_ABI}/libopencv_java4.so
         )
 target_link_libraries( # Specifies the target library.
         yolov5
-
-        # Links the target library to the log library
-        # included in the NDK.
         ${log-lib}
         ${vulkan-lib}
         ${android-lib}
@@ -129,15 +80,8 @@ target_link_libraries( # Specifies the target library.
         libopencv_java4)
 
 
-# Specifies libraries CMake should link to your target library. You
-# can link multiple libraries, such as libraries you define in this
-# build script, prebuilt third-party libraries, or system libraries.
-
 target_link_libraries( # Specifies the target library.
         yolov5
-
-        # Links the target library to the log library
-        # included in the NDK.
         ${log-lib}
         ${vulkan-lib}
         ${android-lib}
