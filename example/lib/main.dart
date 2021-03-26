@@ -1,58 +1,76 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-
-import 'package:flutter/services.dart';
+import 'dart:math' as math;
 import 'package:flutter_yolo_hyperlpr_plugin/flutter_yolo_hyperlpr_plugin.dart';
+import 'package:flutter/services.dart' show ByteData, StandardMessageCodec, rootBundle;
 
-void main() {
+List<CameraDescription> cameras;
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  cameras = await availableCameras();
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'HyperLPR for flutter',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomeApp(),
+    );
+  }
 }
 
-class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+class HomeApp extends StatefulWidget {
+  @override
+  _HomeAppState createState() => _HomeAppState();
+}
 
+class _HomeAppState extends State<HomeApp> {
+  String plate = "";
   @override
   void initState() {
     super.initState();
-    initPlatformState();
   }
 
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      platformVersion = await FlutterYoloHyperlprPlugin.platformVersion;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      _platformVersion = platformVersion;
-    });
+  @override
+  void dispose() {
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
+    return Center(
+        child: Column(
+      children: [
+        Container(child: Text(plate)),
+        RaisedButton(
+          child: Text("查询"),
+          onPressed: () async {
+            ByteData bytes = await rootBundle.load('assets/images/plate.jpg');
+            FlutterYoloHyperlprPlugin.lpr([
+              bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes)
+            ], 1080, 1920)
+                .then((r) {
+              if (r == null || !r.successed) {
+              } else {
+                print(r.number);
+              }
+            });
+          },
         ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
-      ),
-    );
+        Expanded(child:  AndroidView(
+          viewType: 'plugins.nightfarmer.top/myview',
+          creationParams: {
+            "myContent": "通过参数传入的文本内容",
+          },
+          creationParamsCodec: const StandardMessageCodec(),
+        )),
+      ],
+    ));
   }
 }
